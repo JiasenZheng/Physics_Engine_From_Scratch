@@ -7,27 +7,27 @@ This project aims to simulate a planer multi-body dynamics of a jack in a box. I
 ## System schematic
 ![alt text](images/1.jpeg)
 In the figure shown above, the system is a planar model, which means the two objects can only move in x and y directions. There are 9 frames in total:
-* w: the world frame (reference frame)
-* b: the box frame at the center of the box
-* j: the jack frame at the center of the box
-* b1,b2: the frames of the two corners of the box
-* j1,j2,j3,j4: the frames of the 4 masses of the jack
+* **w:** the world frame (reference frame)
+* **b:** the box frame at the center of the box
+* **j:** the jack frame at the center of the box
+* **b1,b2**: the frames of the two corners of the box
+* **j1,j2,j3,j4:** the frames of the 4 masses of the jack
 
 ## Parameter setups
-* l_box(5): perpendicular distance from the center of the box to each wall
-* m_box(150): mass of each wall
-* l_jack(1): distance between the center of the jack to the mass attached to it
-* m_jack(5): point mass of each mass attached to the jack
+* **l_box(5):** perpendicular distance from the center of the box to each wall
+* **m_box(150):** mass of each wall
+* **l_jack(1):** distance between the center of the jack to the mass attached to it
+* **m_jack(5):** point mass of each mass attached to the jack
 * External force: only a force in the positive y-direction is set to counter the gravitational force from the box
 * Initial configuration: A initial rotational speed of the box is set to be 1.5 rad/s so that the box keeps spinning counter-clockwise in the simulation
 
 ## Algorithm descriptions
 * Rigid body transform 
-    * g_wb & g_wj: Transformations from the world frame to the box/ jack frame
-    * g_bb1 & g_bb2: Transformations from the box frame to its two corners
-    * g_jj1 ~ g_jj4: Transformations from the jack frame to its for masses
-    * g_b1j1 ~ g_b1j4: Transformations from the top right corner to each mass of the jack
-    * g_b2j1 ~ g_b2j4: Transformations from the bottom left corner to each mass of the jack
+    * **g_wb & g_wj:** Transformations from the world frame to the box/ jack frame
+    * **g_bb1 & g_bb2:** Transformations from the box frame to its two corners
+    * **g_jj1 ~ g_jj4:** Transformations from the jack frame to its for masses
+    * **g_b1j1 ~ g_b1j4:** Transformations from the top right corner to each mass of the jack
+    * **g_b2j1 ~ g_b2j4:** Transformations from the bottom left corner to each mass of the jack
 * Euler Lagrange</br></br>
 To solve for the dynamic motions of the system, we need to calculate the Euler Lagrange equations and the external force and then equate them. Since we are dealing with objects with rotational inertia, we need to calculate the rotational kinetic energy. The following steps are used to find Euler Lagrange equations:
     1. Calculate body velocities of each object
