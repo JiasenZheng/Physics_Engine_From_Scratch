@@ -5,7 +5,7 @@ This is the final project of ME314 "machine dynamics" at Northwestern University
 This project aims to simulate a planer multi-body dynamics of a jack in a box. In the simulation, external forces are applied to the box. While the jack is falling freely, it will then experience some collisions with the box's walls.
 
 ## System schematic
-![alt text](1.jpeg)
+![alt text](images/1.jpeg)
 In the figure shown above, the system is a planar model, which means the two objects can only move in x and y directions. There are 9 frames in total:
 * w: the world frame (reference frame)
 * b: the box frame at the center of the box
@@ -48,7 +48,7 @@ The following steps are used to solve for impact updates:
     2. Calculate Hamiltonian, dLdqdot, dphidq for the system
     3. Substitute dummy variables to those equations for both before and after impact
     4. Construct and solve for the equations based on the following formula:</br>
-    ![alt text](2.png)
+    ![alt text](images/2.png)
 
 
 ## User instruction
