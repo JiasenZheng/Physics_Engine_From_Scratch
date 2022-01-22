@@ -18,8 +18,8 @@ In the figure shown above, the system is a planar model, which means the two obj
 * **m_box(150):** mass of each wall
 * **l_jack(1):** distance between the center of the jack to the mass attached to it
 * **m_jack(5):** point mass of each mass attached to the jack
-* External force: only a force in the positive y-direction is set to counter the gravitational force from the box
-* Initial configuration: A initial rotational speed of the box is set to be 1.5 rad/s so that the box keeps spinning counter-clockwise in the simulation
+* **External force:** only a force in the positive y-direction is set to counter the gravitational force from the box
+* **Initial configuration:** A initial rotational speed of the box is set to be 1.5 rad/s so that the box keeps spinning counter-clockwise in the simulation
 
 ## Algorithm descriptions
 * Rigid body transform 
